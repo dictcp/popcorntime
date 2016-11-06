@@ -7,10 +7,8 @@ sed -i 's/\r//' popcorntime.sh
 ./popcorntime.sh
 ```
 
-The next time do:
-
+You may also need this if you encounter error like `Gtk: cannot open display: unix:0`
 ```
-docker start popcorn
+xhost local:root
 ```
-
-
+ref: https://github.com/jessfraz/dockerfiles/issues/4

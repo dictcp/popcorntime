@@ -14,8 +14,8 @@ docker run \
     --device /dev/dri \
     --name popcorntime \
     $ENTRYPOINT \
-	jerivas/popcorntime 
-    
+	jerivas/popcorntime
+
 
 #    -e http_proxy=localhost:3128 \
-    
+
