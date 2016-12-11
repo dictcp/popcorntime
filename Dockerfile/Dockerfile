@@ -18,8 +18,9 @@ FROM ubuntu
 MAINTAINER jerivas<jerivas@uaq.edu.mx>
 
 COPY start.sh config /
+COPY alas-downmix.conf /etc/asound.conf
 
-ENV VERSION 0.3.10
+ENV VERSION 0.3.9
 
 RUN \
     dpkg --add-architecture i386 && \
@@ -61,6 +62,6 @@ RUN mkdir /opt/popcorntime/ && tar xvf popcorn-time.tar.xz -C /opt/popcorntime/
 
 RUN ln -sf /lib/$(arch)-linux-gnu/libudev.so.1 /lib/$(arch)-linux-gnu/libudev.so.0
 
-ENTRYPOINT [ "/opt/popcorntime/linux64/Popcorn-Time" ]
+ENTRYPOINT [ "/opt/popcorntime/Popcorn-Time" ]
 
 
